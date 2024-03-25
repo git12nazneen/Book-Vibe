@@ -10,6 +10,7 @@ import MainLayout from './Components/MainLayout';
 import Home from './Components/Home';
 import ListedBook from './Components/ListedBook';
 import PageRead from './Components/PageRead';
+import Book from './Components/Book';
 
 const router = createBrowserRouter([
   {
@@ -28,6 +29,7 @@ const router = createBrowserRouter([
         path:'/pageRead',
         element:<PageRead></PageRead>
       },
+      
     ]
   },
 ]);
