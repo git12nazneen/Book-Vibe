@@ -1,0 +1,80 @@
+ [
+      {
+        "bookId": 1,
+        "bookName": "A story teling wordbook",
+        "author": "F. Scott Fitzgerald",
+        "image": "https://images.unsplash.com/photo-1612969308146-066d55f37ccb?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "review": "A captivating tale of love, greed, and the American Dream set in the Jazz Age.",
+        "totalPages": 180,
+        "rating": 4.5,
+        "category": "Fiction",
+        "tags": ["Romance", "Classic"],
+        "publisher": "Charles Scribner's Sons",
+        "yearOfPublishing": 1925
+      },
+      {
+        "bookId": 2,
+        "bookName": "All the letter i should have sent",
+        "author": "Harper Lee",
+        "image": "https://images.unsplash.com/photo-1515098506762-79e1384e9d8e?q=80&w=1471&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "review": "A poignant exploration of racial injustice and moral growth in the American South.",
+        "totalPages": 281,
+        "rating": 4.8,
+        "category": "Fiction",
+        "tags": ["Social Justice", "Coming-of-age"],
+        "publisher": "J. B. Lippincott & Co.",
+        "yearOfPublishing": 1960
+      },
+      {
+        "bookId": 3,
+        "bookName": "Your soul is river",
+        "author": "J.D. Salinger",
+        "image": "https://images.unsplash.com/photo-1511108690759-009324a90311?q=80&w=1376&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "review": "A timeless portrayal of adolescent angst and disillusionment in post-war America.",
+        "totalPages": 224,
+        "rating": 4.2,
+        "category": "Fiction",
+        "tags": ["Coming-of-age", "Existentialism"],
+        "publisher": "Little, Brown and Company",
+        "yearOfPublishing": 1951
+      },
+      {
+        "bookId": 4,
+        "bookName": "101 essay",
+        "author": "George Orwell",
+        "image": "https://images.unsplash.com/photo-1521123845560-14093637aa7d?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "review": "A chilling dystopian vision of a totalitarian regime and the struggle for individual freedom.",
+        "totalPages": 328,
+        "rating": 4.7,
+        "category": "Fiction",
+        "tags": ["Dystopian", "Political"],
+        "publisher": "Secker & Warburg",
+        "yearOfPublishing": 1949
+      },
+      {
+        "bookId": 5,
+        "bookName": "Milk and honey",
+        "author": "Jane Austen",
+        "image": "https://images.unsplash.com/photo-1544947950-fa07a98d237f?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "review": "A delightful romantic comedy of manners set in early 19th-century England.",
+        "totalPages": 432,
+        "rating": 4.6,
+        "category": "Fiction",
+        "tags": ["Romance", "Classic"],
+        "publisher": "T. Egerton, Whitehall",
+        "yearOfPublishing": 1813
+      },
+      {
+        "bookId": 6,
+        "bookName": "The Psyshocology of money",
+        "author": "J.R.R. Tolkien",
+        "image": "https://images.unsplash.com/photo-1592496431122-2349e0fbc666?q=80&w=1512&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "review": "An enchanting tale of adventure, friendship, and heroism in the magical world of Middle-earth.",
+        "totalPages": 310,
+        "rating": 4.9,
+        "category": "Fiction",
+        "tags": ["Fantasy", "Adventure"],
+        "publisher": "Allen & Unwin",
+        "yearOfPublishing": 1937
+      }
+    ]
