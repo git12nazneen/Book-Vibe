@@ -8,24 +8,6 @@ const BookDetail = () => {
     const { id } = useParams();
     const idInt = parseInt(id);
     const book = bookdetail.find(book => book.Id === idInt);
-
-    // const handleApplyjob = () => {
-    //     const added = saveBookRead(idInt);
-    //     if (added) {
-    //         toast("Book added to read");
-    //     } else {
-    //         toast("Book already in read list");
-    //     }
-    // }
-
-    // const handleWishlist = () => {
-    //     const added = saveBookWish(idInt);
-    //     if (added) {
-    //         toast('Book added to wishlist');
-    //     } else {
-    //         toast('Book already in wishlist');
-    //     }
-    // }
     const handleApplyjob = () => {
         const added = saveBookRead(idInt);
         if (added) {
@@ -137,16 +119,3 @@ const BookDetail = () => {
 };
 
 export default BookDetail;
-
-
-
-
-// const handleWishlist = () => {
-//     const storedReadBooks = getStoredReadBook();
-//     if (storedReadBooks.includes(idInt)) {
-//         toast.error("This book is already in your Read list");
-//     } else {
-//         saveBookWish(idInt);
-//         toast.success("Book added to Wishlist");
-//     }
-// }
