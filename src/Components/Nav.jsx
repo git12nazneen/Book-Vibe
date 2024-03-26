@@ -12,17 +12,27 @@ const Nav = () => {
       </div>
       <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
       <li>
-            <NavLink to='/' activeClassName="border border-green-500 text-green-500" className="text-black">
+            <NavLink  className={({ isActive }) =>
+              isActive ? 'bg-green-500 text-white font-bold' : 'font-bold'
+            } to='/'>
             Home
             </NavLink>
         </li>
         <li>
-            <NavLink to='/listedBooks' activeClassName="border border-green-500 text-green-500" className="text-black">
+            <NavLink 
+             className={({ isActive }) =>
+             isActive ? 'bg-green-500 text-white font-bold' : 'font-bold'
+           }
+            to='/listedBooks'>
             Listed Books
             </NavLink>
         </li>
         <li>
-            <NavLink to='/pageRead' activeClassName="border border-green-500 text-green-500" className="text-black">
+            <NavLink
+             className={({ isActive }) =>
+             isActive ? 'bg-green-500 text-white font-bold' : 'font-bold'
+           }
+            to='/pageRead'>
             Page to Read
             </NavLink>
         </li>
@@ -33,17 +43,28 @@ const Nav = () => {
   <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1 gap-2">
         <li>
-            <NavLink to='/' activeClassName="border border-green-500 text-green-500" className="text-black">
+            <NavLink 
+             className={({ isActive }) =>
+             isActive ? 'bg-green-500 text-white font-bold' : 'font-bold'
+           } to='/'>
             Home
             </NavLink>
         </li>
         <li>
-            <NavLink to='/listedBooks' activeClassName="border border-green-500 text-green-500" className="text-black">
+            <NavLink 
+             className={({ isActive }) =>
+             isActive ? 'bg-green-500 text-white font-bold' : 'font-bold'
+           }
+            to='/listedBooks'>
             Listed Books
             </NavLink>
         </li>
         <li>
-            <NavLink to='/pageRead' activeClassName="border border-green-500 text-green-500" className="text-black">
+            <NavLink 
+             className={({ isActive }) =>
+             isActive ? 'bg-green-500 text-white font-bold' : 'font-bold'
+           }
+            to='/pageRead'>
             Page to Read
             </NavLink>
         </li>
