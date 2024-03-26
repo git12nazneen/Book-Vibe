@@ -13,18 +13,19 @@ const Wish = ({wish}) => {
                    
                     <h2 className="text-3xl font-semibold leading-none">{wish.bookName}</h2>
                     <p className="mt-4 mb-8 text-sm">By : {wish.author}</p>
-                    <div className="flex gap-3">
+                    <div className="flex mx-auto lg:flex-row gap-3">
                         <div className="mt-2">Tags</div>
                         <div className="space-x-2 text-green-600 bg-green-100 rounded-2xl px-4 py-2 text-sm">
                                 #{wish.tags[0]}
                             </div>
+
                             <div className="space-x-2 text-green-600 bg-green-100 rounded-2xl px-4 py-2 text-sm">
                             #{wish.tags[1]}
                             </div>
                         <div className="mt-3">Year Of Publishing {wish.yearOfPublishing}</div>
                         
                     </div>
-                    <div className="flex gap-4 my-8">
+                    <div className="flex flex-col gap-4 my-8">
                         <div>
                             <h3>Publisher: {wish.publisher}</h3>
                         </div>
@@ -33,7 +34,7 @@ const Wish = ({wish}) => {
                         </div>
                         </div>
                         <hr />
-                    <div className="flex gap-3 my-3">
+                    <div className="flex flex-col gap-3 my-3">
                     <div>
                    <button className="bg-blue-200 self-start px-5 py-2 text-sm rounded-3xl text-gray-900">Category {wish.category}</button>
                    </div> <div>

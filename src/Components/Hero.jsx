@@ -9,7 +9,7 @@ const Hero = () => {
             <div className="hero-content flex-col lg:flex-row-reverse">
                 <img src={bannerImg1} className="max-w-lg rounded-lg " />
                 <div className='lg:mr-20'>
-                <h1 className="text-5xl font-bold">Books to freshen up <br /> your bookshelf</h1>
+                <h1 className="lg:text-5xl text-xl font-bold">Books to freshen up <br /> your bookshelf</h1>
                
                 <Link to='/listedBooks' className="btn text-white bg-green-600 mt-6">View the list</Link>
                 </div>

@@ -7,7 +7,7 @@ const COntact = () => {
                 <div className="flex flex-col justify-between">
                     <div className="space-y-2">
                         <h2 className="text-4xl font-bold leading-tight lg:text-5xl">Let's talk!</h2>
-                        <div className="text-gray-400">Vivamus in nisl metus? Phasellus.</div>
+                        <div className="text-gray-400">Contact use for best book find out.</div>
                     </div>
                     <img src={contactImg1} alt="" className=" mb-10 mr-4 h-60 justify-center items-center text-center" />
                 </div>
