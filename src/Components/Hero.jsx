@@ -1,4 +1,5 @@
 // import bannerImg from'../assets/book.jpg'
+import { Link } from 'react-router-dom';
 import bannerImg1 from'../assets/book1.png'
 
 const Hero = () => {
@@ -10,7 +11,7 @@ const Hero = () => {
                 <div className='lg:mr-20'>
                 <h1 className="text-5xl font-bold">Books to freshen up <br /> your bookshelf</h1>
                
-                <button className="btn text-white bg-green-600 mt-6">View the list</button>
+                <Link to='/listedBooks' className="btn text-white bg-green-600 mt-6">View the list</Link>
                 </div>
             </div>
             </div>

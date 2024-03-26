@@ -1,5 +1,7 @@
 import { useLoaderData, useParams } from "react-router-dom";
-
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { saveBookRead } from "../Utility/localstorage";
 
 const BookDetail = () => {
     const bookdetail = useLoaderData()
@@ -9,6 +11,11 @@ const BookDetail = () => {
     console.log(book)
     console.log(bookdetail, id)
   
+    const handleApplyjob = () => {
+        saveBookRead(idInt)
+        toast("Book added to read");
+    
+    }
     
     return (
         <div className="max-w-6xl mx-auto">
@@ -84,12 +91,13 @@ const BookDetail = () => {
                 </div>
             <div className="flex">
             <div className="mr-5">
-                <a className="btn bg-green-500 hover:bg-blue-500 text-white">Read</a>
+                <a onClick={handleApplyjob} className="btn bg-green-500 hover:bg-blue-500 text-white">Read</a>
                 </div>
                 <div>
                 <a className="btn bg-blue-500 hover:bg-green-500 text-white">Wishlist</a>
                 </div>
             </div>
+            <ToastContainer />
 		</div>
 	</div>
 </section>
