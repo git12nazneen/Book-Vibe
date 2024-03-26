@@ -68,6 +68,24 @@ const Nav = () => {
             Page to Read
             </NavLink>
         </li>
+        <li>
+            <NavLink 
+             className={({ isActive }) =>
+             isActive ? 'bg-green-500 text-white font-bold' : 'font-bold'
+           }
+            to='/contact'>
+              Contact us
+            </NavLink>
+        </li>
+        <li>
+            <NavLink 
+             className={({ isActive }) =>
+             isActive ? 'bg-green-500 text-white font-bold' : 'font-bold'
+           }
+            to='/review'>
+            Review
+            </NavLink>
+        </li>
         </ul>
   </div>
   <div className="navbar-end">

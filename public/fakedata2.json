@@ -1,0 +1,39 @@
+[
+    {
+      "id": 1,
+      "reviewPerson": {
+        "name": "John Doe",
+        "profession": "Software Engineer"
+      },
+      "reviewSentence": "Excellent book with great insights into frontend development.",
+      "imageLink": "https://media.istockphoto.com/id/1488678095/photo/mid-adult-latin-man-smiling-pointing-to-the-side-showing-copy-blank-space-isolated-over-blue.jpg?s=1024x1024&w=is&k=20&c=B7q5P51lDZtn11V8guNn_0OaC9GgivjwV6hTLNmpY48="
+    },
+    {
+      "id": 2,
+      "reviewPerson": {
+        "name": "Alice Smith",
+        "profession": "UX Designer"
+      },
+      "reviewSentence": "This book completely changed my perspective on user interface design.",
+      "imageLink": "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    {
+      "id": 3,
+      "reviewPerson": {
+        "name": "Michael Johnson",
+        "profession": "Product Manager"
+      },
+      "reviewSentence": "A must-read for anyone interested in modern web development practices.",
+      "imageLink": "https://media.istockphoto.com/id/1296659396/photo/handsome-young-guy-posing-in-studio-in-olive-t-shirt-looking-at-camera-touching-his-chin.jpg?s=1024x1024&w=is&k=20&c=uiPhpMTAFchbiQo5KfoFh2P3hcIvVz9WrQYeUTl2eCc="
+    },
+    {
+      "id": 4,
+      "reviewPerson": {
+        "name": "Emily Brown",
+        "profession": "Frontend Developer"
+      },
+      "reviewSentence": "Practical and insightful, this book helped me level up my frontend skills.",
+      "imageLink": "https://media.istockphoto.com/id/1344760229/photo/headshot-of-satisfied-cheerful-man-wearing-glasses-glad-to-find-suitable-well-paid-job.jpg?s=1024x1024&w=is&k=20&c=bIUq-fCWncBXi8XU3L1Z49vtoOeJg2Roqt3mOdi6LwI="
+    }
+  ]
+  
