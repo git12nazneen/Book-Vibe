@@ -2,8 +2,9 @@ import { useEffect, useState } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
-import { getStoredReadBook } from '../Utility/localstorage';
 import CardBook from './CardBook';
+import Wish from './Wish';
+import { getStoredReadBook, getStoredWishBook } from '../Utility/localstorage';
 const ListedBook = () => {
 
   const books = useLoaderData();
@@ -29,21 +30,42 @@ const ListedBook = () => {
     }
   },[])
 
+  const [wishBooks, setWishBooks] = useState([])
+
+  useEffect(()=>{
+    const storedWishIds = getStoredWishBook();
+    if(books.length > 0){
+
+      // const appliedBooks = books.filter(book => storedBookIds.includes(book.Id))
+
+      const appliedWish = [];
+      for(const id of storedWishIds){
+        const book = books.find(book => book.Id === id);
+        if(book){
+          appliedWish.push(book)
+        }
+      }
+
+      // console.log(books, storedBookIds ,appliedBooks)
+      setWishBooks(appliedWish);
+    }
+  },[])
+
     return (
-        <div className='max-w-6xl mx-auto'>
-          <h2>books click {clickbooks.length}</h2>
-          
+        <div className='max-w-6xl mx-auto'>    
           <h1 className="text-4xl text-center font-bold">Books</h1>
 
-        <div className='mb-36 w-96 mx-auto'>
-        <details className="dropdown">
-        <summary className="m-1 btn">open or close</summary>
-        <ul className="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52">
+          <div className="flex justify-center items-center">
+      <div className='mb-36 mt-4'>
+        <details className="dropdown  ">
+          <summary className="btn bg-green-500 text-white">open or close</summary>
+          <ul className="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52">
             <li><a>Item 1</a></li>
             <li><a>Item 2</a></li>
-        </ul>
+          </ul>
         </details>
-        </div>
+      </div>
+    </div>
 
           <div>
           <Tabs>
@@ -62,7 +84,13 @@ const ListedBook = () => {
           </div>
             </TabPanel>
             <TabPanel>
-            <h2>Any content 2</h2>
+            <div>
+              {
+                wishBooks.map(wish => <Wish
+                key={wish.id}
+                wish={wish}></Wish>)
+              }
+            </div>
             </TabPanel>
         </Tabs>
           </div>

@@ -1,22 +1,53 @@
 import { useLoaderData, useParams } from "react-router-dom";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { saveBookRead } from "../Utility/localstorage";
+import { getStoredReadBook, saveBookRead, saveBookWish } from "../Utility/localstorage";
 
 const BookDetail = () => {
-    const bookdetail = useLoaderData()
-    const {id} = useParams()
+    const bookdetail = useLoaderData();
+    const { id } = useParams();
     const idInt = parseInt(id);
     const book = bookdetail.find(book => book.Id === idInt);
-    console.log(book)
-    console.log(bookdetail, id)
-  
+
+    // const handleApplyjob = () => {
+    //     const added = saveBookRead(idInt);
+    //     if (added) {
+    //         toast("Book added to read");
+    //     } else {
+    //         toast("Book already in read list");
+    //     }
+    // }
+
+    // const handleWishlist = () => {
+    //     const added = saveBookWish(idInt);
+    //     if (added) {
+    //         toast('Book added to wishlist');
+    //     } else {
+    //         toast('Book already in wishlist');
+    //     }
+    // }
     const handleApplyjob = () => {
-        saveBookRead(idInt)
-        toast("Book added to read");
-    
+        const added = saveBookRead(idInt);
+        if (added) {
+            toast.success("Book added to read");
+        } else {
+            toast.error("Book already in read list");
+        }
     }
-    
+
+    const handleWishlist = () => {
+        const isAlreadyRead = getStoredReadBook().includes(idInt);
+        if (isAlreadyRead) {
+            toast.error("Book already in read list. Cannot add to wishlist.");
+        } else {
+            const added = saveBookWish(idInt);
+            if (added) {
+                toast.success('Book added to wishlist');
+            } else {
+                toast.error('Book already in wishlist');
+            }
+        }
+    }
     return (
         <div className="max-w-6xl mx-auto">
 
@@ -94,7 +125,7 @@ const BookDetail = () => {
                 <a onClick={handleApplyjob} className="btn bg-green-500 hover:bg-blue-500 text-white">Read</a>
                 </div>
                 <div>
-                <a className="btn bg-blue-500 hover:bg-green-500 text-white">Wishlist</a>
+                <a onClick={handleWishlist} className="btn bg-blue-500 hover:bg-green-500 text-white">Wishlist</a>
                 </div>
             </div>
             <ToastContainer />
@@ -106,3 +137,16 @@ const BookDetail = () => {
 };
 
 export default BookDetail;
+
+
+
+
+// const handleWishlist = () => {
+//     const storedReadBooks = getStoredReadBook();
+//     if (storedReadBooks.includes(idInt)) {
+//         toast.error("This book is already in your Read list");
+//     } else {
+//         saveBookWish(idInt);
+//         toast.success("Book added to Wishlist");
+//     }
+// }
