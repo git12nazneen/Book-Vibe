@@ -54,7 +54,7 @@ const ListedBook = () => {
 
 
     return (
-        <div className='max-w-6xl mx-auto'>    
+        <div className='max-w-6xl mx-auto min-h-[calc(100vh-120px)]'>    
           <h1 className="text-4xl text-center font-bold">Books</h1>
 
           <div className="flex justify-center items-center">
@@ -75,7 +75,7 @@ const ListedBook = () => {
           <Tabs>
             <TabList>
             <Tab>Read Books</Tab>
-            <Tab>Wished List</Tab>
+            <Tab>Wishlist Books</Tab>
             </TabList>
 
             <TabPanel>
