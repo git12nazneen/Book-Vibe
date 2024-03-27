@@ -11,10 +11,10 @@ const Review = () => {
         .then(data => setReviews(data))
     },[])
     return (
-        <div className='max-w-6xl mx-auto'>    
-           <h2>data {reviews.length}</h2>
+        <div className='max-w-6xl mx-auto '>    
+         
           
-         <div>
+         <div className="grid lg:grid-cols-2 grid-cols-1 gap-6 ">
             {
                 reviews.map(review => <SingleReview
                 key={review.id}

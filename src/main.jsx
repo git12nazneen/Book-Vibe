@@ -14,6 +14,7 @@ import BookDetail from './Components/BookDetail';
 import Eror from './Components/Eror';
 import Review from './Components/Review';
 import COntact from './Components/COntact';
+import Blogs from './Components/Blogs';
 
 
 const router = createBrowserRouter([
@@ -47,6 +48,11 @@ const router = createBrowserRouter([
       {
         path:'/review',
         element: <Review></Review>,
+      },
+      {
+        path:'/blog/:id',
+        element:<Blogs></Blogs>,
+        loader: () => fetch('fakedata2.json')
       }
     ]
   },
