@@ -7,7 +7,8 @@ const BookDetail = () => {
     const bookdetail = useLoaderData();
     const { id } = useParams();
     const idInt = parseInt(id);
-    const book = bookdetail.find(book => book.Id === idInt);
+    const book = bookdetail.find(book => book.id === idInt);
+  
     const handleApplyjob = () => {
         const added = saveBookRead(idInt);
         if (added) {

@@ -13,6 +13,7 @@ const Review = () => {
     return (
         <div className='max-w-6xl mx-auto '>    
          
+         <h1 className="font-extrabold lg:text-4xl text-xl my-10 text-center">See our more review to our clients</h1>
           
          <div className="grid lg:grid-cols-2 grid-cols-1 gap-6 ">
             {

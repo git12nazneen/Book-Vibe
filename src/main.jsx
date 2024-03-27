@@ -14,7 +14,7 @@ import BookDetail from './Components/BookDetail';
 import Eror from './Components/Eror';
 import Review from './Components/Review';
 import COntact from './Components/COntact';
-import Blogs from './Components/Blogs';
+
 
 
 const router = createBrowserRouter([
@@ -30,16 +30,17 @@ const router = createBrowserRouter([
       {
         path:'/listedBooks',
         element:<ListedBook></ListedBook>,
-        loader:()=> fetch('fakedata.json')
+        loader:()=> fetch('/fakedata.json')
       },
       {
         path:'/pageRead',
-        element:<PageRead></PageRead>
+        element:<PageRead></PageRead>,
+        loader:()=> fetch('/fakedata.json'),
       },
       {
         path:'/book/:id',
         element:<BookDetail></BookDetail>,
-        loader: ()=> fetch('fakedata.json')
+        loader: ()=> fetch('/fakedata.json')
       },
       {
         path:'/contact',
@@ -49,11 +50,7 @@ const router = createBrowserRouter([
         path:'/review',
         element: <Review></Review>,
       },
-      {
-        path:'/blog/:id',
-        element:<Blogs></Blogs>,
-        loader: () => fetch('fakedata2.json')
-      }
+      
     ]
   },
 ]);

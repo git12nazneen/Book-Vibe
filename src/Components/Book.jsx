@@ -5,13 +5,13 @@ import { Link } from "react-router-dom";
 const Book = ({book}) => {
   
    
-    const {Id,bookName, author, image, rating, category, tags} = book
+    const {id,bookName, author, image, rating, category, tags} = book
     return (
         <div>
          
             <div className="flex flex-col w-80 p-5 my-4 space-y-6 overflow-hidden rounded-lg shadow-md border border-gray-300 text-black">
 	<div>
-		<Link to={`/book/${Id}`}>
+		<Link to={`/book/${id}`}>
         <img src={image} alt="" className=" w-full mb-4 lg:h-52 sm:h-96 bg-gray-500" />
         </Link>
         <div className="flex flex-wrap justify-between my-3">

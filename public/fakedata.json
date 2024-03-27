@@ -1,6 +1,6 @@
  [
       {
-        "Id": 1,
+        "id": 1,
         "bookName": "A story telling wordbook",
         "author": "F. Scott Fitzgerald",
         "image": "https://images.unsplash.com/photo-1612969308146-066d55f37ccb?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
@@ -13,7 +13,7 @@
         "yearOfPublishing": 1925
       },
       {
-        "Id": 2,
+        "id": 2,
         "bookName": "All the letter i should have sent",
         "author": "Harper Lee",
         "image": "https://images.unsplash.com/photo-1515098506762-79e1384e9d8e?q=80&w=1471&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
@@ -26,7 +26,7 @@
         "yearOfPublishing": 1960
       },
       {
-        "Id": 3,
+        "id": 3,
         "bookName": "Your soul is river",
         "author": "J.D. Salinger",
         "image": "https://images.unsplash.com/photo-1511108690759-009324a90311?q=80&w=1376&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
@@ -39,7 +39,7 @@
         "yearOfPublishing": 1951
       },
       {
-        "Id": 4,
+        "id": 4,
         "bookName": "101 essay",
         "author": "George Orwell",
         "image": "https://images.unsplash.com/photo-1521123845560-14093637aa7d?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
@@ -52,7 +52,7 @@
         "yearOfPublishing": 1949
       },
       {
-        "Id": 5,
+        "id": 5,
         "bookName": "Milk and honey",
         "author": "Jane Austen",
         "image": "https://images.unsplash.com/photo-1544947950-fa07a98d237f?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
@@ -65,7 +65,7 @@
         "yearOfPublishing": 1813
       },
       {
-        "Id": 6,
+        "id": 6,
         "bookName": "The Psyshocology of money",
         "author": "J.R.R. Tolkien",
         "image": "https://images.unsplash.com/photo-1592496431122-2349e0fbc666?q=80&w=1512&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",

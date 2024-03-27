@@ -10,46 +10,23 @@ const ListedBook = () => {
   const books = useLoaderData();
 
   const [clickbooks, setClickBooks] = useState([]);
-
-  useEffect(()=>{
+ const [wishBooks, setWishBooks] = useState([])
+  
+  useEffect(() => {
     const storedBookIds = getStoredReadBook();
-    if(books.length > 0){
-
-      // const appliedBooks = books.filter(book => storedBookIds.includes(book.Id))
-
-      const appliedBooks = [];
-      for(const id of storedBookIds){
-        const book = books.find(book => book.Id === id);
-        if(book){
-          appliedBooks.push(book)
-        }
-      }
-
-      // console.log(books, storedBookIds ,appliedBooks)
+    if (Array.isArray(books) && books.length > 0) {
+      const appliedBooks = storedBookIds.flatMap(id => books.find(book => book.id === id));
       setClickBooks(appliedBooks);
     }
-  },[])
-
-  const [wishBooks, setWishBooks] = useState([])
-
-  useEffect(()=>{
+  }, [books]);
+  
+  useEffect(() => {
     const storedWishIds = getStoredWishBook();
-    if(books.length > 0){
-
-      // const appliedBooks = books.filter(book => storedBookIds.includes(book.Id))
-
-      const appliedWish = [];
-      for(const id of storedWishIds){
-        const book = books.find(book => book.Id === id);
-        if(book){
-          appliedWish.push(book)
-        }
-      }
-
-      // console.log(books, storedBookIds ,appliedBooks)
+    if (Array.isArray(books) && books.length > 0) {
+      const appliedWish = storedWishIds.flatMap(id => books.find(book => book.id === id));
       setWishBooks(appliedWish);
     }
-  },[])
+  }, [books]);
 
     return (
         <div className='max-w-6xl mx-auto'>    
@@ -58,9 +35,11 @@ const ListedBook = () => {
           <div className="flex justify-center items-center">
       <div className='mb-36 mt-4'>
         <details className="dropdown  ">
-          <summary className="btn bg-green-500 text-white">open or close</summary>
+          <summary className="btn bg-green-500 text-white">Sort by</summary>
           <ul className="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52">
-            <li><a>Item 1</a></li>
+            <li><a>All</a></li>
+            <li><a>Rating</a></li>
+            <li><a>Pages</a></li>
             <li><a>Item 2</a></li>
           </ul>
         </details>
@@ -77,8 +56,9 @@ const ListedBook = () => {
             <TabPanel>
           <div>
             {
-              clickbooks.map(bookd => <CardBook key={bookd.id}
-              bookd={bookd}
+              clickbooks.map(bookd => <CardBook
+                 key={bookd.id}
+                  bookd={bookd}
               ></CardBook>)
             }
           </div>
@@ -99,3 +79,5 @@ const ListedBook = () => {
 };
 
 export default ListedBook;
+
+
