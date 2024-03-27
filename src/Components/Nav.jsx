@@ -54,9 +54,13 @@ const Nav = () => {
             Review
             </NavLink>
         </li>
-      </ul>
+        <div>
+    <a className="btn bg-blue-500 hover:bg-green-500 text-white">Sign up</a>
     </div>
-    <Link to='/' className="btn btn-ghost text-xl">Book Vibe</Link>
+      </ul>
+    
+    </div>
+    <Link to='/' className="btn btn-ghost text-xl">Story Books</Link>
   </div>
   <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1 gap-2">
@@ -110,8 +114,8 @@ const Nav = () => {
     <div className="mr-5">
     <a className="btn bg-green-500 hover:bg-blue-500 text-white">Sign in</a>
     </div>
-    <div>
-    <a className="btn bg-blue-500 hover:bg-green-500 text-white">Sign up</a>
+    <div className="hidden sm:block">
+    <a className="btn  bg-blue-500 hover:bg-green-500 text-white ">Sign up</a>
     </div>
   
   </div>

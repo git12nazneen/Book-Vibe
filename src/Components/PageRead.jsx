@@ -38,8 +38,9 @@ const PageRead = () => {
   return (
 
 
-        <ResponsiveContainer>
+       
    <div style={{width: "100%", height:"80vh"}}>
+     <ResponsiveContainer>
    <BarChart
       width={600}
       height={500}
@@ -60,8 +61,9 @@ const PageRead = () => {
         ))}
       </Bar>
     </BarChart>
-   </div>
+ 
   </ResponsiveContainer>
+  </div>
   );
 };
 

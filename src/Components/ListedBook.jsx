@@ -15,43 +15,26 @@ const ListedBook = () => {
  const [sortBy, setSortBy] = useState(''); 
 
 
-  // useEffect(() => {
-  //   const storedBookIds = getStoredReadBook();
-  //   if (Array.isArray(books) && books.length > 0) {
-  //     const appliedBooks = storedBookIds.flatMap(id => books.find(book => book.id === id));
-  //     setClickBooks(appliedBooks);
-  //   }
-  // }, [books]);
-  
-  // useEffect(() => {
-  //   const storedWishIds = getStoredWishBook();
-  //   if (Array.isArray(books) && books.length > 0) {
-  //     const appliedWish = storedWishIds.flatMap(id => books.find(book => book.id === id));
-  //     setWishBooks(appliedWish);
-  //   }
-  // }, [books]);
-
   useEffect(() => {
     const storedBookIds = getStoredReadBook();
     if (Array.isArray(books) && books.length > 0) {
       const appliedBooks = storedBookIds.flatMap(id => books.find(book => book.id === id));
-      // Sort the books based on the selected sorting option
+
       const sortedBooks = applySorting(appliedBooks);
       setClickBooks(sortedBooks);
     }
-  }, [books, sortBy]); // Include sortBy in dependency array
+  }, [books, sortBy]); 
 
   useEffect(() => {
     const storedWishIds = getStoredWishBook();
     if (Array.isArray(books) && books.length > 0) {
       const appliedWish = storedWishIds.flatMap(id => books.find(book => book.id === id));
-      // Sort the wish books based on the selected sorting option
+
       const sortedWishBooks = applySorting(appliedWish);
       setWishBooks(sortedWishBooks);
     }
-  }, [books, sortBy]); // Include sortBy in dependency array
+  }, [books, sortBy]); 
 
-  // Function to apply sorting based on the selected option
   const applySorting = (booksData) => {
     switch (sortBy) {
       case 'Rating':
@@ -61,11 +44,10 @@ const ListedBook = () => {
         case 'Year':
           return booksData.sort((a, b) => b.yearOfPublishing - a.yearOfPublishing);
       default:
-        return booksData; // Return unsorted books if no sorting option selected
+        return booksData; 
     }
   };
 
-  // Function to handle sorting option change
   const handleSortChange = (option) => {
     setSortBy(option);
   };
@@ -76,7 +58,7 @@ const ListedBook = () => {
           <h1 className="text-4xl text-center font-bold">Books</h1>
 
           <div className="flex justify-center items-center">
-      <div className='mb-36 mt-4'>
+      <div className='mb-36 mt-4 mx-4 lg:mx-0'>
         <details className="dropdown  ">
           <summary className="btn bg-green-500 text-white">Sort by</summary>
           <ul className="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52">

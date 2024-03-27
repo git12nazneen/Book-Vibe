@@ -3,17 +3,17 @@
 const Wish = ({wish}) => {
     const {bookName, author, image, tags,rating , category, publisher, yearOfPublishing , totalPages} = wish
     return (
-        <div className="my-10">
-        <section className=" text-gray-800 border border-gray-300 py-5 px-5 rounded-2xl">
+        <div className="my-10 mx-4 lg:mx-0">
+        <section className=" text-gray-800 border border-gray-300 py-1 px-5 rounded-2xl">
                 <div className="container flex flex-col mx-auto lg:flex-row">
                     <div className="w-full lg:w-1/3" >
-                    <img src={wish.image} alt="" className="rounded-lg shadow-lg h-96" />
+                    <img src={wish.image} alt="" className="rounded-lg shadow-lg h-80 w-80 lg:mt-8 mt-5" />
                     </div>
                     <div className="flex flex-col w-full p-6 lg:w-2/3 md:p-8 lg:p-12">
                        
                         <h2 className="text-3xl font-semibold leading-none">{wish.bookName}</h2>
                         <p className="mt-4 mb-8 text-sm">By : {wish.author}</p>
-                        <div className="flex gap-4">
+                        <div className="flex flex-wrap gap-4">
                             <div className="mt-2">Tags</div>
                             <div className="space-x-2 text-green-600 bg-green-100 rounded-2xl px-4 py-2 text-sm">
                                     #{wish.tags[0]}
