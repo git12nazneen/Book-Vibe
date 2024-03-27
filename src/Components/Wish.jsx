@@ -1,7 +1,8 @@
+import { Link } from "react-router-dom";
 
 
 const Wish = ({wish}) => {
-    const {bookName, author, image, tags,rating , category, publisher, yearOfPublishing , totalPages} = wish
+    const {bookName, author, image, tags,rating , category, publisher, yearOfPublishing , totalPages , id} = wish
     return (
         <div className="my-10 mx-4 lg:mx-0">
         <section className=" text-gray-800 border border-gray-300 py-1 px-5 rounded-2xl">
@@ -40,7 +41,10 @@ const Wish = ({wish}) => {
                        <button className="bg-orange-200 self-start px-5 py-2 text-sm  rounded-3xl text-gray-900">Rating {wish.rating}</button>
                        </div>
                       <div>
-                       <button className="bg-green-300 self-start px-5 py-2 text-sm rounded-3xl text-gray-900">View Details</button>
+                      <Link to={`/book/${id}`}>
+                      <button className="bg-green-300 self-start px-5 py-2 text-sm rounded-3xl text-gray-900">View Details</button>
+                        </Link>
+                      
                        </div>
                         </div>
                     </div>
