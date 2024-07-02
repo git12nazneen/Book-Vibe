@@ -27,7 +27,7 @@ To get a local copy up and running, follow these simple steps:
 
 1. Clone the repository:
     ```sh
-    git clone https://github.com/yourusername/book-vibe.git
+   https://github.com/git12nazneen/Book-Vibe.git
     ```
 2. Navigate to the project directory:
     ```sh
